@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class RandomWord {
     private String[] words = {"father", "mother", "brother", "eye", "family", "sister", "friend", "likeness", "illness"};
+
     private String chosenWord;
     private Random random = new Random();
     private char[] characters;
@@ -16,15 +17,32 @@ public class RandomWord {
         StringBuilder sb = new StringBuilder();
 
         for (char c : characters) {
-            if (c == '\u0000') {
-                sb.append('_');
-            } else {
-                sb.append(c);
-            }
-
+            sb.append(c == '\u0000' ? '_' : c);
             sb.append(' ');
         }
 
         return sb.toString();
+    }
+
+    public boolean isComplete() {
+
+        for (char c : characters) {
+            if (c == '\u0000') {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public void addGuess(char c) {
+        // Fill in c in the character array
+        // wherever it's found
+        // in the random word
+        for (int i = 0; i < chosenWord.length(); i++) {
+            if (c == chosenWord.charAt(i)) {
+                characters[i] = c;
+            }
+        }
     }
 }
