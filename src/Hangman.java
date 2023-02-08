@@ -4,6 +4,8 @@ public class Hangman {
     private boolean running = true;
     private RandomWord word = new RandomWord();
     private Scanner input = new Scanner(System.in);
+    private int triesRemaining = 5;
+    private char lastGuess;
 
     public void run() {
         do {
@@ -14,6 +16,7 @@ public class Hangman {
     }
 
     void displayWord() {
+        System.out.println("Tries remaining: " + triesRemaining);
         System.out.println(word);
     }
 
@@ -24,15 +27,28 @@ public class Hangman {
         // argument to a method
         System.out.print("Enter your guess: ");
         String guess = input.nextLine();
-        word.addGuess(guess.charAt(0));
+        lastGuess = guess.charAt(0);
     }
 
     private void checkUserInput() {
-        if (word.isComplete()) {
-            System.out.println("You have won!");
-            System.out.println("The word is: " + word);
-            running = false;
+
+        boolean isCorrect = word.addGuess(lastGuess);
+
+        if(isCorrect) {
+            if (word.isComplete()) {
+                System.out.println("You have won!");
+                System.out.println("The word is: " + word);
+                running = false;
+            }
+        } else {
+            triesRemaining--;
+
+            if(triesRemaining == 0) {
+                System.out.println("You have lost!");
+                running = false;
+            }
         }
+
     }
 
     public void close() {

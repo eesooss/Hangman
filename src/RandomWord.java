@@ -35,14 +35,18 @@ public class RandomWord {
         return true;
     }
 
-    public void addGuess(char c) {
+    public boolean addGuess(char c) {
         // Fill in c in the character array
         // wherever it's found
         // in the random word
+        boolean correct = false;
+
         for (int i = 0; i < chosenWord.length(); i++) {
             if (c == chosenWord.charAt(i)) {
                 characters[i] = c;
+                correct = true;
             }
         }
+        return correct;
     }
 }

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79367965-d7fe-46f7-9e1c-83872f9dc778" name="Changes" comment="String builder is added">
+    <list default="true" id="79367965-d7fe-46f7-9e1c-83872f9dc778" name="Changes" comment="Minimal viable product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hangman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hangman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RandomWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomWord.java" afterDir="false" />
     </list>
@@ -78,13 +77,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675794818719</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Minimal viable product">
+      <created>1675853721612</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675853721612</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project is created" />
     <MESSAGE value="Random class is added" />
     <MESSAGE value="String builder is added" />
-    <option name="LAST_COMMIT_MESSAGE" value="String builder is added" />
+    <MESSAGE value="Minimal viable product" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minimal viable product" />
   </component>
 </project>
