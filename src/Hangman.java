@@ -34,7 +34,7 @@ public class Hangman {
 
         boolean isCorrect = word.addGuess(lastGuess);
 
-        if(isCorrect) {
+        if (isCorrect) {
             if (word.isComplete()) {
                 System.out.println("You have won!");
                 System.out.println("The word is: " + word);
@@ -43,7 +43,7 @@ public class Hangman {
         } else {
             triesRemaining--;
 
-            if(triesRemaining == 0) {
+            if (triesRemaining == 0) {
                 System.out.println("You have lost!");
                 running = false;
             }
